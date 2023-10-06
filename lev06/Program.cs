@@ -16,7 +16,7 @@ Console.ResetColor();
 Console.WriteLine("\nhogyvagy?");
 Console.ReadKey();
 */
-//elágazások - > Conditions and If Statements
+/* elágazások - > Conditions and If Statements
 Console.Write("Hány éves vagy: ");
 int age = int.Parse(Console.ReadLine());
 if (age >= 18)
@@ -48,4 +48,50 @@ else
 
 }
 
-Console.ReadKey();
+Console.ReadKey(); */
+// ciklusok -> loops ->while (előltesztelő), do (hátultesztelő), for 
+// fel akarunk venni egy új dolgozót, de nem akarunk nyugdíjasokat vagy diákokat,
+// legyen IQ-ja is. (Gondolunk egy számra)
+// Határérték (legalább 10-ből)
+//irassuk ki hány próbálkozás után találtuk ki csillagokkal.
+
+Console.Write("Hány éves vagy?");
+int age = int.Parse(Console.ReadLine());
+while (age < 18 || age > 65)
+{
+  Console.Write("Sajnos nem te vagy a mi emberünk!\nJöhet a következő!\nHány éves vagy?");
+  age = int.Parse(Console.ReadLine());
+}
+
+Random random = new Random();
+int number = random.Next(1, 101);
+Console.WriteLine(number);
+Console.WriteLine("Gondoltunk egy számra, találd ki!");
+int tip;
+int tipCounter = 0;
+do
+{
+  Console.Write("Kérünk egy tippet (1-100): ");
+  tip = int.Parse(Console.ReadLine());
+  tipCounter++;
+  if (tip > number)
+  {
+    Console.WriteLine("Nagyra gondoltál!");
+  }
+  else if (tip < number)
+  {
+    Console.WriteLine("Kicsire gondoltál");
+  }
+  else
+  {
+    Console.WriteLine("Ügyes vagy, kitaláltad!");
+  }
+} while (tip != number && tipCounter < 5);
+if (tip == number) Console.WriteLine("\nÜdv a fedélzeten!"); else Console.WriteLine("\nNem te vagy a mi emberünk!");
+
+Console.Clear();
+
+for (int i = 0; i < tipCounter; i++)
+{
+  Console.Write("*");
+}
