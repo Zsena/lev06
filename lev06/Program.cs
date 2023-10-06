@@ -1,6 +1,8 @@
 ﻿// See https://aka.ms/new-console-template for more information
-Console.SetCursorPosition(20, 5);
-Console.Write("Ez az első programom!\n");
+string message = "Ez az első programom!\n";
+int x = (Console.WindowWidth - message.Length) / 2;
+Console.SetCursorPosition(x, 5);
+Console.Write(message);
 Console.Write("Hogy hívnak: ");
 string userName = Console.ReadLine();
 Console.ForegroundColor = ConsoleColor.Red;
