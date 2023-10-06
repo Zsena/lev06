@@ -16,3 +16,36 @@ Console.ResetColor();
 Console.WriteLine("\nhogyvagy?");
 Console.ReadKey();
 */
+//elágazások - > Conditions and If Statements
+Console.Write("Hány éves vagy: ");
+int age = int.Parse(Console.ReadLine());
+if (age >= 18)
+{
+  Console.ForegroundColor = ConsoleColor.Green;
+  Console.WriteLine("Mit kérsz?");
+}
+else
+{
+  if (age < 16)
+  {
+    Console.ForegroundColor = ConsoleColor.Yellow;
+    Console.WriteLine("Kakaó vagy tej?");
+  }
+  else
+  {
+    Console.Write("Hol vagy (A/H):");
+    string place = Console.ReadLine();
+    if (place == "A" || place == "a")
+    {
+      Console.WriteLine("Milyen sört kérsz?");
+    }
+    else
+    {
+      Console.ForegroundColor = ConsoleColor.Yellow;
+      Console.WriteLine("Kakaó vagy tej?");
+    }
+  }
+
+}
+
+Console.ReadKey();
