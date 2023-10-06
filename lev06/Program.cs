@@ -1,5 +1,5 @@
 ﻿// See https://aka.ms/new-console-template for more information
-// Szekvenciális program - input - output
+/* Szekvenciális program - input - output
 string message = "Ez az első programom!\n";
 int x = (Console.WindowWidth - message.Length) / 2;
 Console.SetCursorPosition(x, 5);
@@ -14,6 +14,5 @@ Console.BackgroundColor = ConsoleColor.Green;
 Console.Write("\tMizu?");
 Console.ResetColor();
 Console.WriteLine("\nhogyvagy?");
-
-
 Console.ReadKey();
+*/
